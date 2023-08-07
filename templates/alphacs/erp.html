@@ -1,0 +1,122 @@
+{%  extends "index.html" %}
+{% load static%}
+
+{% block content %}
+
+<style>
+    @media only screen and (max-width: 600px) {
+    #erptext{
+        display: none;
+    }
+    #erphead{
+        justify-content: center;
+    }
+
+  }
+  
+</style>
+
+<br><br><br>
+<div class="container-fluid">
+    <div>
+        <section class="erp_banner_area_two">
+            <ul class="list-unstyled cloud_animation">
+                <li><img src="{% static 'alphacs/saas/img/erp-home/cloud_01.png' %}" alt=""></li>
+                <li><img src="{% static 'alphacs/saas/img/erp-home/cloud_02.png' %}" alt=""></li>
+                <li><img src="{% static 'alphacs/saas/img/erp-home/cloud_03.png' %}" alt=""></li>
+                <li><img src="{% static 'alphacs/saas/img/erp-home/cloud_04.png' %}" alt=""></li>
+                <li><img src="{% static 'alphacs/saas/img/erp-home/cloud_05.png' %}" alt=""></li>
+                <li><img src="{% static 'alphacs/saas/img/erp-home/cloud_06.png' %}" alt=""></li>
+            </ul>
+           
+            <div class="erp_shap_two" style="background: url(../../static/alphacs/img/erp-home/banner_shap.png) no-repeat scroll top left;">
+            </div>
+            <div class="section_intro">
+                <div class="section_container">
+                    <div class="intro">
+                        <div class=" intro_content">
+                            <h1 id="erphead">ERP Software for Small and medium business</h1>
+                            <p id="erptext">A simple and powerful erp software for Manufacturing, Distribution and Services.</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+        
+     
+        <section class="erp_service_area sec_pad">
+            <div class="container">
+                <div class="hosting_title erp_title text-center">
+                    <h2>Accessible, Convenient & Manageable</h2>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="erp_service_item pr_70">
+                            <img src="{% static 'alphacs/images/alphaimg/secured.svg' %}" height="120px" width="120px" alt="">
+                            <a ><h3 class="h_head">Secured ERP</h3></a>
+                            <p>Implementation Of Most Secured ERP For Your Data Security.</p>
+    
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="erp_service_item pr_70 pl_10">
+                            <img src="{% static 'alphacs/images/alphaimg/scl-clg.svg' %}" height="120px" width="120px" alt="">
+                            <a ><h3 class="h_head">ERP For Everyone</h3></a>
+                            <p>ERP Solution For School, Colleges & Any Organistion. </p>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="erp_service_item pr_70 pl_10">
+                            <img src="{% static 'alphacs/images/alphaimg/uiux.svg' %}" height="120px" width="120px" alt="">
+                            <a ><h3 class="h_head">UI/UX Design</h3></a>
+                            <p>Our ERP Solution Is Designed With Latest UI/UX Design. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="erp_service_item pr_70 pl_10">
+                            <img src="{% static 'alphacs/images/alphaimg/installation.svg' %}" height="120px" width="120px" alt="">
+                            <a><h3 class="h_head">Easy Installation</h3></a>
+                            <p>Our ERP Solution Installation Is Very Easy. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="erp_service_item pr_70 pl_10">
+                            <img src="{% static 'alphacs/images/alphaimg/gateway.svg' %}" height="120px" width="120px" alt="">
+                            <a><h3 class="h_head">Payment Gateway</h3></a>
+                            <p>We Provide ERP Solution With All Payment Gateway Integration. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+                        <div class="erp_service_item pr_70 pl_10">
+                            <img src="{% static 'alphacs/images/alphaimg/multiplatform.svg' %}" height="120px" width="120px" alt="">
+                            <a><h3 class="h_head">Multi Platform</h3></a>
+                            <p>Our ERP Solution Runs Smoothely On Every Platfrom. </p>
+                        </div>
+                    </div>
+                   
+                   
+                </div>
+            </div>
+        </section>
+    
+    
+        
+    
+        <section class="">
+            <div class="container">
+                <div class="erp_action_content text-center">
+                    <img src="{% static 'alphacs/images/alphaimg/rocket.png' %}" alt="">
+                    <h3>Experience a smarter way to close deals</h3>
+                    <p>With Our<span>ERP Solution</span></p>
+                    <a href="{% url 'contact-us' %}" class="er_btn er_btn_two">Contact Us</a>
+                </div>
+            </div>
+        </section>
+</div>
+
+
+{% endblock %}

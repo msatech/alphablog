@@ -1,0 +1,473 @@
+{%  extends "index.html" %}
+{% load static%}
+
+{% block content %}
+<style>
+    @media only screen and (max-width: 600px) {
+    .list--secondary{
+        text-align: center;
+    }
+    }
+   
+  
+</style>
+
+<br><br><br>
+<div class="container-full-width">
+    <div class="swiper-container main-slider" data-effect="fade" data-autoplay="4000">
+
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide bg-border-color">
+
+                <div class="container">
+                    <div class="row table-cell">
+
+                        <div class="col-lg-12">
+
+                            <div class="slider-content align-center">
+
+                                <h1 class="slider-content-title" data-swiper-parallax="-100">Search Engine
+                                    Optimization!</h1>
+                                <h5 class="slider-content-text c-gray" data-swiper-parallax="-200">Discover More About
+                                    Our SEO Expertise!</h5>
+
+                              
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="slider-thumb" data-swiper-parallax="-400" data-swiper-parallax-duration="600">
+                                <img src="{% static 'alphacs/img/slider1.png' %}" alt="slider">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide bg-primary-color main-slider-bg-dark thumb-left">
+
+                <div class="container table full-height">
+                    <div class="row table-cell">
+
+                        <div class="col-lg-5 table-cell">
+                            <div class="slider-content">
+                                <br><br><br>
+                                <h1 class="slider-content-title" data-swiper-parallax="-100">Local SEO
+                                   </h1>
+                            
+                       
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 table-cell">
+                            <div class="slider-thumb" data-swiper-parallax="-300" data-swiper-parallax-duration="500">
+                                <img src="{% static 'alphacs/img/slider2.png' %}" alt="slider">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide bg-secondary-color main-slider-bg-dark">
+
+                <div class="container table full-height">
+                    <div class="row table-cell">
+                        <div class="col-lg-6 table-cell">
+
+                            <div class="slider-content">
+                                <br><br><br>
+                                <h1 class="slider-content-title" data-swiper-parallax="-100">Social Media
+                                    Marketing Services</h1>
+                            
+                       
+                            </div>
+
+                          
+
+                        </div>
+                        <div class="col-lg-6 table-cell">
+                            <div class="slider-thumb" data-swiper-parallax="-300" data-swiper-parallax-duration="500">
+                                <img src="{% static 'alphacs/img/slider3.png' %}" alt="slider">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide bg-orange-color main-slider-bg-dark">
+                <div class="container table full-height">
+                    <div class="row table-cell">
+
+                        <div class="col-lg-12">
+
+                            <div class="slider-content align-center">
+                                <div class="slider-content">
+                                    <h1 class="slider-content-title" data-swiper-parallax="-100">Email
+                                        Marketing</h1>
+                                
+                           
+                                </div>
+                              
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="slider-thumb" data-swiper-parallax="-400" data-swiper-parallax-duration="600">
+                                <img src="{% static 'alphacs/img/slider4.png' %}" alt="slider">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+
+        <!--Prev next buttons-->
+
+        <svg class="btn-next btn-next-black">
+            <use xlink:href="#arrow-right"></use>
+        </svg>
+
+        <svg class="btn-prev btn-prev-black">
+            <use xlink:href="#arrow-left"></use>
+        </svg>
+
+        <!--Pagination tabs-->
+
+        <div class="slider-slides">
+            <a class="slides-item bg-border-color main-slider-bg-light">
+                <div class="content">
+                    <div class="text-wrap">
+                        <h4 class="slides-title">Search Engine Optimization</h4>
+                    </div>
+                    <div class="slides-number">01</div>
+                </div>
+            </a>
+
+            <a class="slides-item bg-primary-color">
+                <div class="content">
+                    <div class="text-wrap">
+                        <h4 class="slides-title">Local SEO</h4>
+                    </div>
+                    <div class="slides-number">02</div>
+                </div>
+            </a>
+
+            <a class="slides-item bg-secondary-color">
+                <div class="content">
+                    <div class="text-wrap">
+                        <h4 class="slides-title">Social Media Marketing</h4>
+                    </div>
+                    <div class="slides-number">03</div>
+                </div>
+            </a>
+
+            <a class="slides-item bg-orange-color">
+                <div class="content">
+                    <div class="text-wrap">
+                        <h4 class="slides-title">Email Marketing</h4>
+                    </div>
+                    <div class="slides-number">04</div>
+                </div>
+            </a>
+
+          
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+<div class="row medium-padding120">
+    <div class="col-lg-12">
+        <div class="offers">
+            <div class="row" >
+                <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12" >
+                    <div class="heading text-center">
+                        <h4 class="h1 heading-title">We Offer a Full Range of Digital
+                            Marketing Services!</h4>
+                        <div class="heading-line">
+                            <span class="short-line"></span>
+                            <span class="long-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"  style="margin-top:8%">
+                    <div class="heading">
+                        <p class="heading-text text-center">Our Internet Marketing Services
+                        </p>
+                    </div>
+
+                    <ul class="list list--secondary">
+                        <li>
+                            <i class="seoicon-check"></i>
+                            <a>
+                            Digital Competititve Analysis</a>
+                        </li>
+                        <li>
+                            <i class="seoicon-check"></i>
+                            <a >Content Marketing</a>
+                        </li>
+                        <li>
+                            <i class="seoicon-check"></i>
+                            <a>Strategy & Analytics Consulting</a>
+                        </li>
+                        <li>
+                            <i class="seoicon-check"></i>
+                            <a>Branding & Creative Service</a>
+                        </li>
+                    </ul>
+
+                
+
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="offers-thumb">
+                        <img src="{% static 'alphacs/img/offers1.png' %}" alt="offers">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="container">
+<div class="row pt120">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <div class="heading align-center mb60">
+            <h4 class="h1 heading-title">The Best Email Marketing Strategy</h4>
+            <div class="heading-line">
+                <span class="short-line"></span>
+                <span class="long-line"></span>
+            </div>
+
+            <p class="heading-text">Our professional email marketers help your business stay top-of-mind with your prospects and existing customers by sending custom newsletters.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <img src="{% static 'alphacs/img/marketing.png' %}" alt="marketing">
+    </div>
+
+</div>
+</div>
+
+
+
+
+<div class="container-fluid">
+<div class="row medium-padding120 bg-border-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <div class="heading mb30">
+                    <h4 class="h1 heading-title">Social Media
+                        Marketing Services</h4>
+                    <div class="heading-line">
+                        <span class="short-line"></span>
+                        <span class="long-line"></span>
+                    </div>
+
+                    <h5 class="heading-subtitle">Start your social media marketing campaigns, including Facebook, Twitter, Pinterest, Instagram, and more, today.                            .
+                    </h5>
+
+                </div>
+
+                <ul class="list list--secondary mb60">
+                    <li>
+                        <i class="seoicon-check"></i>
+                        <a>Brand Monitoring
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="seoicon-check"></i>
+                        <a>Social Media Management
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="seoicon-check"></i>
+                        <a>Setup & Custom Profile Design
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="seoicon-check"></i>
+                        <a>Social Media Contests
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
+                <img src="{% static 'alphacs/img/social-photo.png' %}" alt="social">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Pie charts -->
+
+<div class="container">
+<div class="row pt120">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="heading mb60">
+            <h4 class="h1 heading-title">Professional Tools for Your Business</h4>
+            <div class="heading-line">
+                <span class="short-line"></span>
+                <span class="long-line"></span>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+    <div class="row mb60">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="pie-chart-item toolsforbusiness ">
+                <div class="pie-chart" data-value="0.43" data-start-color="#b9750f" data-end-color="#fc9700">
+                    <div class="content"><span>43</span>%</div>
+                </div>
+
+                <div class="pie-chart-content">
+                    <h4 class="pie-chart-content-title">Brand Monitoring</h4>
+                    <p class="pie-chart-content-text">Brand Monitoring.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="pie-chart-item toolsforbusiness">
+                <div class="pie-chart"  data-value="0.68" data-start-color="#298355" data-end-color="#3cb879">
+                    <div class="content"><span>68</span>%</div>
+                </div>
+
+                <div class="pie-chart-content">
+                    <h4 class="pie-chart-content-title">Social Media Contests</h4>
+                    <p class="pie-chart-content-text">Social Media Contests.
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb60">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="pie-chart-item toolsforbusiness">
+                <div class="pie-chart"  data-value="0.9" data-start-color="#3b8d8c" data-end-color="#4cc3c1">
+                    <div class="content"><span>90</span>%</div>
+                </div>
+
+                <div class="pie-chart-content">
+                    <h4 class="pie-chart-content-title">Social Media
+                        Management</h4>
+                    <p class="pie-chart-content-text">Social Media
+                        Management.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="pie-chart-item toolsforbusiness">
+                <div class="pie-chart"  data-value="0.19" data-start-color="#cc481d" data-end-color="#f15927">
+                    <div class="content"><span>19</span>%</div>
+                </div>
+
+                <div class="pie-chart-content">
+                    <h4 class="pie-chart-content-title">Setup & Custom
+                        Profile Design</h4>
+                    <p class="pie-chart-content-text">Setup & Custom
+                        Profile Design.
+                    </p>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- End Pie charts -->
+
+<!-- Info Box -->
+
+<div class="container-fluid">
+<div class="row bg-boxed-primary pt120">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading align-center mb60">
+                    <h4 class="h1 heading-title">Social Media Promotion</h4>
+                    <div class="heading-line">
+                        <span class="short-line bg-yellow-color"></span>
+                        <span class="long-line bg-yellow-color"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="info-box--standard-centered">
+                    <div class="info-box-image">
+                        <img src="{% static 'alphacs/img/info-box18.png' %}" alt="image">
+                    </div>
+                    <div class="info-box-content">
+                        <h4 class="info-box-title">Content Marketing</h4>
+                        <p class="text c-white">Nam liber tempor cum soluta nobis eleifend option congue nihil
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+
+                   
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="{% static 'alphacs/img/social-photo2.png' %}" alt="photo">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="info-box--standard-centered">
+                    <div class="info-box-image">
+                        <img src="{% static 'alphacs/img/info-box19.png' %}" alt="image">
+                    </div>
+                    <div class="info-box-content">
+                        <h4 class="info-box-title">Great Rankings</h4>
+                        <p class="text c-white">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                            consuetudium lectorum per seacula quarta decima et quinta decima.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

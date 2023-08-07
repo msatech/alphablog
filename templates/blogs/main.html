@@ -1,0 +1,432 @@
+{% extends "blogbase.html" %} {% load static%} {% block content %}
+<br><br><br><br><br>
+<style>
+    .pagination {
+        display: inline-block;
+    }
+    
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    
+    .pagination a.active {
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+         
+    }
+    
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+    
+    #previous {
+        background-color: #ddd;
+        color: black;
+        border-radius: 5px;
+    }
+    
+    #next {
+        background-color: #ddd;
+        color: black;
+        border-radius: 5px;
+    }
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<div class="col-10 mx-auto">
+    <div class="mt-5">
+
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 ">
+                <!--Section: Content-->
+                <section class="text-center">
+
+                    <!-- Section heading -->
+                    <h3 class="font-weight-bold mb-5 pb-4">Alpha Blogs</h3>
+
+                    <div class="row">
+
+
+
+                        <!-- Grid column -->
+                        {% for blog in blogs %}
+                        <div class="col-lg-4 col-md-6 mb-md-0 mb-4 mb-3 pb-5">
+
+                            <!-- Card -->
+                            <div class="card hoverable h-100">
+
+                                <!-- Card image -->
+                                <img class="card-img-top" src="{{blog.BlogImage.url}}" style="width:100%; height:215px;" alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <p class="card-title text-muted text-uppercase font-small mt-1 mb-3">
+                                        {% for category in blog.category.all %} {% for color in colors %} {% if forloop.counter == forloop.parentloop.counter %}
+
+                                        <span class="badge badge-{{color}}">{{category}}</span> {% endif %} {% endfor %} {% endfor %}
+
+
+                                    </p>
+                                    <!-- Text -->
+                                    <a href="{% url 'single-post' blog.slug %}">
+                                        <p class="mb-2">{{blog.title}}</p>
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+
+                        </div>
+                        {% endfor %}
+
+                        <!-- Grid column -->
+
+
+
+                    </div>
+                    <div class="row text-center">
+                        <div class="mx-auto col-md-12">
+                            <div class="card mx-auto">
+                                <div class="pagination">
+                                    {% if blogs.has_previous %}
+                                    <a href="?page={{blogs.previous_page_number}}" id="previous">&laquo;</a> {% endif %}
+
+                                    <a href="" class="mx-5 text-white" style="background-color: #1d1750">{{blogs.number}}</a> {% if blogs.has_next %}
+                                    <a href="?page={{blogs.next_page_number}}" id="next">&raquo;</a> {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--pagination-->
+
+                        <!--End Pagination-->
+
+
+                </section>
+
+                <!--Section: Content-->
+
+                </div>
+
+                <div class="col-md-12 py-5 px-5 col-lg-3 col-sm-12">
+                    <!--Grid column-->
+                    <div class="mt-5 py-5 mb-2">
+
+
+                        <div class="card mb-3 pt-3 shadow-3 mb-5">
+
+                            <form action="{% url 'search' %}" method="POST" class="form-inline d-flex justify-content-center md-form form-sm active-pink active-pink-2 mt-2">
+                                {% csrf_token %}
+                                <i class="fas fa-search text-info fa-lg" aria-hidden="true"></i>
+                                <input class="form-control form-control-sm ml-3 w-75" id="search_input" type="text" name="term" placeholder="Search Posts" aria-label="Search">
+                            </form>
+
+                        </div>
+
+                        <script>
+                            $("#search_input").autocomplete({
+                                source: "{% url 'autocomplete' %}"
+                            });
+                        </script>
+                        <style>
+                            .ui-autocomplete {
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                z-index: 1000;
+                                display: none;
+                                float: left;
+                                min-width: 160px;
+                                padding: 5px 0;
+                                margin: 2px 0 0;
+                                list-style: none;
+                                font-size: 14px;
+                                text-align: left;
+                                background-color: #ffffff;
+                                border: 1px solid #cccccc;
+                                border: 1px solid rgba(0, 0, 0, 0.15);
+                                border-radius: 4px;
+                                -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+                                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+                                background-clip: padding-box;
+                            }
+                            
+                            .ui-autocomplete>li>div {
+                                display: block;
+                                padding: 3px 20px;
+                                clear: both;
+                                font-weight: normal;
+                                line-height: 1.42857143;
+                                color: #333333;
+                                white-space: nowrap;
+                            }
+                            
+                            .ui-state-hover,
+                            .ui-state-active,
+                            .ui-state-focus {
+                                text-decoration: none;
+                                color: #262626;
+                                background-color: #f5f5f5;
+                                cursor: pointer;
+                            }
+                            
+                            .ui-helper-hidden-accessible {
+                                border: 0;
+                                clip: rect(0 0 0 0);
+                                height: 1px;
+                                margin: -1px;
+                                overflow: hidden;
+                                padding: 0;
+                                position: absolute;
+                                width: 1px;
+                            }
+                        </style>
+
+
+
+
+                        <!--Categories-->
+                        <div class="card mb-4 wow fadeIn mb-2">
+
+                            <div class="card-header">Categories</div>
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <ul class="list-unstyled">
+                                    {% for category in categoryList %}
+                                    <li class="media">
+                                        <div class="row">
+
+                                            <div class="col-12">
+                                                <div class="media-body px-3 ">
+                                                    <a href="{% url 'category-wise-blog' category %}">
+                                                        <h6 class="mt-0 mb-1 font-weight-bold ">{{category | capfirst}}</h6>
+                                                    </a>
+
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    {% endfor %}
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <!--End Categories-->
+
+
+                        <!--Card-->
+                        <div class="card mb-4 wow fadeIn mb-2">
+
+                            <div class="card-header">Related articles</div>
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <ul class="list-unstyled">
+                                    {% for article in recentarticle %}
+                                    <li class="media">
+                                        <div class="row">
+                                            <div class="col-md-4 col-4">
+                                                <img class="d-flex mr-3" height="250" width="200" src="{{article.BlogImage.url}}">
+                                            </div>
+                                            <div class="col-md-8 col-8">
+                                                <div class="media-body">
+                                                    <a href="{% url 'single-post' article.slug %}">
+                                                        <h6 class="mt-0 mb-1 font-weight-bold">{{article.title | slice:":70" }}</h6>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <hr> {% endfor %}
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--Grid column-->
+                </div>
+            </div>
+
+
+            <div class="row mt-5">
+
+                <!--Recent Post -->
+                <section class="dark-grey-text mt-5 py-5">
+
+
+
+
+                    <!-- Grid row -->
+                    <div class="card p-5">
+                        <!-- Section heading -->
+                        <h2 class="text-center font-weight-bold mb-4 pb-2">Recent posts</h2>
+                        <!-- Section description -->
+                        {% for rpost in newarticle %}
+                        <div class="row align-items-center">
+
+                            <!-- Grid column -->
+                            <div class="col-lg-5">
+
+                                <!-- Featured image -->
+                                <div class="mb-lg-0 mb-4">
+                                    <img class="img-fluid" src="{{rpost.BlogImage.url}}">
+                                    <a>
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-lg-7">
+
+                                <!-- Category -->
+                                <a href="#!" class="green-text">
+                    
+                    {% for category in rpost.category.all %}
+                    {% for color in colors %}
+
+                    {% if forloop.counter == forloop.parentloop.counter %}
+                    <h6 class="font-weight-bold mb-3"><i class="fa fa-newspaper-o pr-2"><span class="badge p-3 mx-3 badge-{{color}}">{{category}}</span></i> </h6>
+                    
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                  
+                 </a>
+                                <!-- Post title -->
+                                <h4 class="font-weight-bold mb-3"><strong>{{rpost.title}}</strong></h4>
+                                <!-- Excerpt -->
+                                <p>{{rpost.content | slice:":350" | safe }}</p>
+                                <!-- Post data -->
+                                <p>by <a href=""><strong>Alphacs</strong></a>, {{rpost.createdDate}}</p>
+                                <!-- Read more button -->
+                                <a class="btn btn-outline-primary mx-0" href="{% url 'single-post' rpost.slug %}">Read More <i class="fas fa-arrow-right fs-9 ml-2"></i></a>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Grid row -->
+
+
+
+
+                </section>
+                <!--End Resent Post-->
+            </div>
+
+
+
+            <div class="card p-5 my-5">
+
+
+                <!--Section: Content-->
+                <section class="magazine-section dark-grey-text">
+
+                    <!-- Section heading -->
+                    <h3 class="text-center font-weight-bold mb-4 pb-2 py-3 pb-5">Latest Blogs</h3>
+                    <!-- Section description -->
+
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+
+
+
+                        {% for blog in latestblogs %}
+                        <!-- Small news -->
+                        <div class=" col-lg-6 col-md-6 single-news mb-4">
+
+                            <!-- Grid row -->
+                            <div class="row">
+
+                                <!-- Grid column -->
+                                <div class="col-md-3 col-sm-3 col-3">
+
+                                    <!--Image-->
+                                    <div class="view rounded z-depth-1 mb-4">
+                                        <img class="img-fluid" src="{{blog.BlogImage.url}}" alt="Sample image">
+                                        <a href="{% url 'single-post' blog.slug %}">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-md-9 col-sm-9 col-9">
+
+                                    <!-- Excerpt -->
+                                    <p class="font-weight-bold dark-grey-text">{{blog.createdDate}}</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="col-11 text-truncate pl-0 mb-3">
+                                            <a href="{% url 'single-post' blog.slug %}" class="dark-grey-text">{{blog.title}}</a>
+                                        </div>
+                                        <a href="{% url 'single-post' blog.slug %}"><i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+
+                                </div>
+                                <!-- Grid column -->
+
+                            </div>
+                            <!-- Grid row -->
+
+                        </div>
+                        <!-- Small news -->
+                        {% endfor %}
+
+
+
+
+                    </div>
+                    <!-- Grid row -->
+
+                </section>
+                <!--Section: Content-->
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    {% endblock %}

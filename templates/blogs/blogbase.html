@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Meta Google-->
+    <title>{{title}}</title>
+
+    <meta name="keywords" content="{% for keyword in keywords %}{{keyword.keyword}}, {% endfor %}" />
+
+    <meta name="description" content="{{description}}" />
+    <meta name="author" content="alphacs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="google-site-verification" content="uB5ahc97b6d0vXhYE-NbBLF96wQWEkG3YmvGejv63uQ /">
+
+    <link rel="shortcut icon" href="{% static 'alphacs/images/favicon.ico' %}" />
+
+
+    <link rel="stylesheet" href="{% static 'alphacs/css/style.css' %}" />
+
+
+    <link rel="stylesheet" href="{% static 'alphacs/css/fonts.css' %}" />
+
+
+
+
+    <link rel="stylesheet" href="{% static 'alphacs/css/modules.css' %}">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+
+
+
+
+    <link rel="stylesheet" href="{% static 'alphacs/css/customstyle.css' %}" />
+
+
+    <link rel="stylesheet" href="{% static 'alphacs/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'alphacs/saas/css/style.css' %}">
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'alphacs/css/base.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'alphacs/css/primary-menu.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <style>
+        body {
+            /* background-color: #EAEEFF; */
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="site-header">
+
+        <div class="container">
+
+            <div class="header-content-wrapper mb-2" id="content-wraper">
+
+                <div class="logo" style="float:left">
+                    <a href="{% url 'home' %}" class="full-block-link"></a>
+                    <img src="{% static 'alphacs/images/alphaimg/alpha.svg' %}" height="0px" style="margin-top: 10px;" width="35px" alt="Alphacs Logo" xalt="#">
+                    <div class="logo-text">
+                        <div class="logo-title">Alphacs</div>
+                        <div class="logo-sub-title">Alpha Cyber Solution</div>
+                    </div>
+                </div>
+
+                <nav id="primary-menu" class="primary-menu" style="float:right">
+
+                    <a href='javascript:void(0)' id="menu-icon-trigger" class="menu-icon-trigger showhide">
+                        <span class="mob-menu--title"></span>
+                        <span id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: hidden">
+                                <svg width="1000px" height="1000px">
+                                    <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                                    <path id="pathE" d="M 300 500 L 700 500"></path>
+                                    <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                                </svg>
+                            </span>
+                    </a>
+
+                    <!-- menu-icon-wrapper -->
+
+                    <ul class="primary-menu-menu">
+
+                        <li class="menu-item-has-children">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+
+                        <li class="">
+                            <a href="03_services.html">Services</a>
+                            <ul class="dropdown">
+                                <li class="megamenu-item-info">
+                                    <!--<h5 class="megamenu-item-info-title">List of Services</h5>
+                                    <p class="megamenu-item-info-text">Choose a Service</p>-->
+                                </li>
+                                <li class="hover-ver2">
+                                    <a href="{% url 'mobile' %}">
+                                        Mobile App Development
+                                    </a>
+                                </li>
+                                <li class="hover-ver2">
+                                    <a href="{% url 'web' %}">
+                                        Web Development
+                                    </a>
+                                </li>
+                                <li class="hover-ver2">
+                                    <a href="{% url 'cloud' %}">
+                                        Cloud Services Management
+                                    </a>
+                                </li>
+                                <li class="hover-ver2">
+                                    <a href="{% url 'erp' %}">
+                                        ERP Development
+                                    </a>
+                                </li>
+                                <li class="hover-ver2">
+                                    <a href="{% url 'crm' %}">
+                                        CRM Development
+                                    </a>
+                                </li>
+                                <li class="hover-ver2">
+                                    <a href="{% url 'seo' %}">
+                                        SEO & Digital Marketing
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <li class="">
+                            <a href="{% url 'blog' %}">Blog</a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'contact-us' %}">Contact Us</a>
+                        </li>
+                        <li>
+
+
+                            {% if user.is_authenticated %}
+
+
+                            <a class="btn btn-outline-danger mx-0" href="{% url 'logout-user' %}">Logout <i class="fas fa-sign-out fs-9 ml-1"></i></a> {% else %}
+
+                            <a class="btn btn-outline-primary mx-0" href="{% url 'user-login' %}">Login <i class="fas fa-sign-in fs-9 ml-1"></i></a> {% endif %}
+
+                        </li>
+
+
+                    </ul>
+                </nav>
+
+
+            </div>
+
+        </div>
+
+    </header>
+    {% block content %} {% endblock %}
+
+    <div class="footer">
+
+        <section class="s_subscribe_area">
+            <div class="s_shap">
+
+
+            </div>
+            <div class="container">
+                <div class="row" id="footer1">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s">
+                            <img src="{% static 'alphacs/images/alphaimg/alphafull.svg' %}" style="margin-top: -10px;" alt="Alphacs Footer Logo">
+                            <p class="f_400 f_p f_size_15 mb-0 l_height28 mt_30"></p>
+                            <div class="widget-wrap">
+                                <p class="f_400 f_p f_size_15 mb-0 l_height34"><span>Email:</span> <a class="f_400">alphacs.in@gmail.com</a></p>
+                                <p class="f_400 f_p f_size_15 mb-0 l_height34"><span>Phone:</span> <a href="tel:948256347968" class="f_400">+91 94825634796</a></p>
+                                <p class="f_400 f_p f_size_15 mb-0 l_height34"><span>Address:</span> <a class="f_400">Faridbad (<b>India</b>)</a></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_20 wow fadeInLeft" data-wow-delay="0.6s">
+                            <h3 class="f-title f_600 t_color f_size_18 mb_40">Our Services</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="{% url 'mobile' %}">Mobile App Development</a></li>
+                                <li><a href="{% url 'web' %}">Web Development</a></li>
+                                <li><a href="{% url 'cloud' %}">Cloud Services Management</a></li>
+                                <li><a href="{% url 'erp' %}">ERP Development</a></li>
+                                <li><a href="{% url 'crm' %}">CRM Development</a></li>
+                                <li><a href="{% url 'seo' %}">SEO & Digital Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" id="appdevelopmentfooter">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                            <h3 class="f-title f_600 t_color f_size_18 mb_40 " style="margin-top:20px;">App Development</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="{% url 'mobile' %}">Android App Development</a></li>
+                                <li><a href="{% url 'mobile' %}">Mobile UI/UX Development</a></li>
+                                <li><a href="{% url 'mobile' %}">IOS App Development</a></li>
+                                <li><a href="{% url 'mobile' %}">Hybrid App Development</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" style="margin-top:20px;">
+                        <div class="f_widget about-widget pl_20 wow fadeInLeft" data-wow-delay="0.8s">
+                            <h3 class="f-title f_600 t_color f_size_18 mb_40">Web Development</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="{% url 'web' %}">Website Development</a></li>
+                                <li><a href="{% url 'web' %}">ERP Development</a></li>
+                                <li><a href="{% url 'web' %}">CRM Development</a></li>
+                                <li><a href="{% url 'web' %}">Custom Web App Development</a></li>
+                                <li><a href="{% url 'web' %}">API Based Web Services Development</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-5 col-sm-6">
+                        <p class="mb-0 f_400">Copyright © 2020 | Alpha Cyber Solution</p>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-6">
+                        <div class="f_social_icon_two text-center">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-vimeo-alt"></i></a>
+                            <a href="#"><i class="ti-pinterest"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <ul class="list-unstyled f_menu text-right">
+                            <li><a>Terms of Use</a></li>
+                            <li><a>Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="{% static 'alphacs/js/jquery.min.js' %}"></script>
+    <script src="{% static 'alphacs/js/bootstrap.min.js' %}"></script>
+
+
+
+
+    <script src="{% static 'alphacs/js/crum-mega-menu.js' %}"></script>
+    <script src="{% static 'alphacs/js/swiper.jquery.min.js' %}"></script>
+
+    <script src="{% static 'alphacs/js/main.js' %}"></script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
+
+</body>
+
+</html>

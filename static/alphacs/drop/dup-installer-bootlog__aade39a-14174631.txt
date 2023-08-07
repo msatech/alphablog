@@ -1,0 +1,46 @@
+[Oct 14 18:17:59] Using archive /home/zlqeapaccm9g/public_html/20191014_alphacs_aade39a3db4e627d6758_20191014174631_archive.zip
+[Oct 14 18:17:58] 
+[Oct 14 18:17:59] Manual extract found so not going to extract dup-installer dir
+[Oct 14 18:17:59] ERROR: Didn't need to extract the installer.
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/assets to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/classes to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/ctrls to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/favicon to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/lib to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/views to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/.user.ini to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-archive__aade39a-14174631.txt to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-database__aade39a-14174631.sql to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-installer-csrf__aade39a-14174631.txt to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-installer-log__aade39a-14174631.txt to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-installer-notices__aade39a-14174631.json to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-scan__aade39a-14174631.json to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/index.php to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/installer-state.txt to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/main.installer.php to 0<br/>
+[Oct 14 18:17:59] DONE: No detected errors so redirecting to the main installer. Main Installer URI = http://alphacs.in/dup-installer/main.installer.php
+[Oct 14 18:17:59] ==DUPLICATOR INSTALLER BOOTSTRAP v1.3.22==
+[Oct 14 18:17:59] ----------------------------------------------------
+[Oct 14 18:17:59] Installer bootstrap start
+[Oct 14 18:17:59] Using archive /home/zlqeapaccm9g/public_html/20191014_alphacs_aade39a3db4e627d6758_20191014174631_archive.zip
+[Oct 14 18:17:59] Manual extract found so not going to extract dup-installer dir
+[Oct 14 18:17:59] ERROR: Didn't need to extract the installer.
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/assets to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/classes to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/ctrls to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/favicon to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/lib to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/views to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/.user.ini to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-archive__aade39a-14174631.txt to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-database__aade39a-14174631.sql to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-installer-csrf__aade39a-14174631.txt to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-installer-log__aade39a-14174631.txt to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-installer-notices__aade39a-14174631.json to 0<br/>
+[Oct 14 18:17:59] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/dup-scan__aade39a-14174631.json to 0<br/>
+[Oct 14 18:18:00] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/index.php to 0<br/>
+[Oct 14 18:18:00] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/installer-state.txt to 0<br/>
+[Oct 14 18:18:00] Set permissions of /home/zlqeapaccm9g/public_html/dup-installer/main.installer.php to 0<br/>
+[Oct 14 18:18:00] DONE: No detected errors so redirecting to the main installer. Main Installer URI = http://alphacs.in/dup-installer/main.installer.php

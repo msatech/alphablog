@@ -1,0 +1,23 @@
+@media only screen and (max-width: 570px) {
+    
+    #appdevelopmentfooter{
+      
+      margin-left:-50px;
+    }
+    #footer1{
+      margin-left:10px;
+    }
+    #contactus{
+      margin-top:-100px;
+    }
+    #content-wraper{
+      margin-bottom: -60px;
+    }
+    #menu-icon-wrapper{
+      margin-top:-20px;
+    }
+    #technologies{
+      margin-top:-310px;
+    }
+    
+  }

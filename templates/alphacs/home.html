@@ -1,0 +1,435 @@
+
+{%  extends "index.html" %}
+{% load static%}
+
+{% block content %}
+
+<br><br><br>
+<section class="saas_banner_area_two">
+    <div id="particles-js"></div>
+
+    <div class="section_intro">
+        <div class="section_container">
+            <div class="intro">
+                <div class=" intro_content">
+                    <h1 class="f_700 f_size_50 w_color f_p">Alpha Cyber Solution</h1>
+                    <p class="w_color f_size_18">Alphacs Transforms Technology Vision Into Reality</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="shap_img" src="{% static 'alphacs/saas/img/home-10/shape.png' %}" alt="Main Shape">
+    <div class="animation_img wow fadeInUp" data-wow-delay="0.3s">
+        <img src="{% static 'alphacs/images/alphaimg/desk.svg' %}" alt="Main Desk Shape">
+    </div>
+</section>
+
+
+<div class="main-content">
+
+<!----> <section class="hosting_service_area sec_pad">
+    <div data-parallax='{"x": 0, "y": 100}'><div class="pattern_shap" style="background: url(../../static/alphacs/saas/img/pos/pattern_02.png);"></div></div>
+    <div class="container">
+        <div class="heading hosting_title text-center">
+            <h4 class="h1our1 heading-titleour1 wow fadeInUp" data-wow-delay="0.3s">Services We Offer</h4>
+            <div class="heading-line">
+                <span class="short-line"></span>
+                <span class="long-line"></span>
+                
+            </div>
+        </div>
+        <div class="row seo_service_info">
+            <div class="col-lg-4 col-md-6 servicesweoffer">
+                <div class="seo_service_item " onclick="location.href=`{% url 'mobile' %}`;" style="text-align: center;">
+                    <img src="{% static 'alphacs/images/alphaimg/android.svg' %}"  height="120px" width="120px" alt="Android Logo">
+                    <a href="{% url 'mobile' %}" >
+                        <h4>Mobile App Development</h4>
+                    </a>
+                    <br>
+                    <!--<p>Twit cras excuse my French matie boy grub it's all gone to pot off his nut butty horse play blow off pardon you hanky panky.!</p>-->
+                    <a href="{% url 'mobile' %}"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" onclick="location.href=`{% url 'web' %}`;" style="text-align: center;">
+                <div class="seo_service_item ">
+                    <img src="{% static 'alphacs/images/alphaimg/web.svg' %}"  height="120px" width="120px" alt="Web Logo">
+                    <a href="{% url 'web' %}" >
+                        <h4>Web Development</h4>
+                    </a>
+                    <br>
+                    <!--<p>Twit cras excuse my French matie boy grub it's all gone to pot off his nut butty horse play blow off pardon you hanky panky.!</p>-->
+                    <a href="{% url 'web' %}"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" onclick="location.href=`{% url 'cloud' %}`;" style="text-align: center;">
+                <div class="seo_service_item ">
+                    <img src="{% static 'alphacs/images/alphaimg/cloud.svg' %}"  height="120px" width="120px" alt="Cloud Logo">
+                    <a href="{% url 'cloud' %}" >
+                        <h4>Cloud Services Management</h4>
+                    </a>
+                    <br>
+                    <!--<p>Twit cras excuse my French matie boy grub it's all gone to pot off his nut butty horse play blow off pardon you hanky panky.!</p>-->
+                    <a href="{% url 'cloud' %}"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" onclick="location.href=`{% url 'erp' %}`;" style="text-align: center;">
+                <div class="seo_service_item ">
+                    <img src="{% static 'alphacs/images/alphaimg/erp.svg' %}"  height="120px" width="120px" alt="Erp Logo">
+                    <a href="{% url 'erp' %}" >
+                        <h4>ERP Development</h4>
+                    </a>
+                    <br>
+                    <!--<p>Twit cras excuse my French matie boy grub it's all gone to pot off his nut butty horse play blow off pardon you hanky panky.!</p>-->
+                    <a href="{% url 'erp' %}"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" onclick="location.href=`{% url 'crm' %}`;" style="text-align: center;">
+                <div class="seo_service_item servicesweoffer">
+                    <img src="{% static 'alphacs/images/alphaimg/crm.svg' %}"  height="120px" width="120px" alt="Crm Logo">
+                    <a href="{% url 'crm' %}" >
+                        <h4 >CRM Development</h4>
+                    </a>
+                    <br>
+                    <!--<p>Twit cras excuse my French matie boy grub it's all gone to pot off his nut butty horse play blow off pardon you hanky panky.!</p>-->
+                    <a href="{% url 'crm' %}"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" onclick="location.href=`{% url 'seo' %}`;" style="text-align: center;">
+                <div class="seo_service_item ">
+                    <img src="{% static 'alphacs/images/alphaimg/marketing.svg' %}"  height="120px" width="120px" alt="Seo Logo">
+                    <a href="{% url 'seo' %}">
+                        <h4>SEO & Digital Marketing</h4>
+                    </a>
+                    <br>
+                    <!--<p>Twit cras excuse my French matie boy grub it's all gone to pot off his nut butty horse play blow off pardon you hanky panky.!</p>-->
+                    <a href="{% url 'seo' %}"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="easy_setup_area sec_pad">
+    <div class="container">
+        <div class="heading hosting_title analytices_title text-center">
+            <h2 class="h1our1 heading-titleour1 wow fadeInUp" data-wow-delay="0.2s"><span>Our great services
+            </span> </h2>
+            <div class="heading-line">
+                <span class="short-line"></span>
+                <span class="long-line"></span>
+                
+            </div>
+        </div>
+        <div class="setup_inner">
+            <div class="setup_item rowour">
+                <div class="col-md-5 setup_img wow fadeInLeft" data-wow-delay="0.2s">
+                    <img src="{% static 'alphacs/images/alphaimg/services5.png' %}" alt="Ui UX">
+                </div>
+                <div class="col-md-2 s_number">
+                    <div class="round">01</div>
+                </div>
+                <div class="col-md-5">
+                    <div class="setup_content wow fadeInRight" data-wow-delay="0.4s">
+                        <h5>Awesome UI/UX Design</h5>
+                    </div>
+                </div>
+                <div class="line bottom_half wow height" data-wow-delay="0.5s"></div>
+            </div>
+            <div class="setup_item rowour flex-row-reverseour">
+                <div class="col-md-5 setup_img wow fadeInLeft" data-wow-delay="0.2s">
+                    <img src="{% static 'alphacs/images/alphaimg/services3.png' %}" alt="Backend Logo">
+                </div>
+                <div class="col-md-2 s_number">
+                    <div class="round">02</div>
+                </div>
+                <div class="col-md-5">
+                    <div class="setup_content wow fadeInRight"  style="margin-left: 105px;" data-wow-delay="0.4s">
+                        <h5>Strong Backend</h5>
+                    </div>
+                </div>
+                <div class="line wow height" data-wow-delay="0.9s"></div>
+            </div>
+            <div class="setup_item rowour">
+                <div class="col-md-5 setup_img wow fadeInLeft" data-wow-delay="0.2s">
+                    <img src="{% static 'alphacs/images/alphaimg/services1.png' %}" alt="Security Logo">
+                </div>
+                <div class="col-md-2 s_number">
+                    <div class="round">03</div>
+                </div>
+                <div class="col-md-5">
+                    <div class="setup_content wow fadeInRight" data-wow-delay="0.4s">
+                        <h5>Extreme Security</h5>
+                    </div>
+                </div>
+                <div class="line wow height" data-wow-delay="1.5s"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+  <section class="support_integration_area">
+    <div class="container">
+        <div class="heading sec_title text-center mb_70 wow fadeInUp" data-wow-delay="0.3s">
+            <h2 class="f_p f_size_30 l_height50 f_600 t_color3">Technologies We Use</h2>
+            <div class="heading-line">
+                <span class="short-line"></span>
+                <span class="long-line"></span>
+                
+            </div>
+            <p class="f_400 f_size_16 mb-0">We deliver innovative and creative products using modern technologies. </p>
+        </div>
+        <div class="row flex-row-reverse" id="technologies">
+            <div class="col-lg-3 col-md-2 col-sm-12">
+                <img class="integration_img" src="{% static 'alphacs/saas/img/new-home/tree.png' %}" alt="Technology Background">
+            </div>
+            <div class="col-lg-9 col-md-10 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a class="s_integration_item">
+                            <img src="{% static 'alphacs/images/alphaimg/python.svg' %}" height="80px" width="80px" alt="Python Logo">
+                            <h5>Python</h5>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a class="s_integration_item">
+                            <img src="{% static 'alphacs/images/alphaimg/php.svg' %}" height="80px" width="80px" alt="Php Logo">
+                            <h5>PHP</h5>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a class="s_integration_item">
+                            <img src="{% static 'alphacs/images/alphaimg/java.svg' %}" height="80px" width="80px" alt="Java Logo">
+                            <h5>Java</h5>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a class="s_integration_item">
+                            <img src="{% static 'alphacs/images/alphaimg/swift.svg' %}" height="80px" width="80px" alt="Swift Logo">
+                            <h5>Swift</h5>
+                        </a>
+                    </div>
+                 
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a  class="s_integration_item">
+                            <img src="{% static 'alphacs/images/alphaimg/js.svg' %}" height="80px" width="80px" alt="Javascript Logo">
+                            <h5>Javascript</h5>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <a class="s_integration_item">
+                            <img src="{% static 'alphacs/images/alphaimg/wordpress.svg' %}" height="80px" width="80px" alt="Wordpress Logo">
+                            <h5>Wordpress</h5>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="overview-block-ptb">
+    <div class="container">
+        <div class="row">
+            <br><br><br>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="heading">
+
+                    <h4 class="h1our1 heading-titleour1">Quality Skills</h4>
+
+                    <div class="heading-line">
+                        <span class="short-line"></span>
+                        <span class="long-line"></span>
+                    </div>
+
+                    <p class="mb30">Our All Team Members Are Having World Class Development and Marketing Techniques, We Are Expertise In UI/UX Design,
+                        Backend and Logic Implementation, Digital Marketing and Seo As These Are One Of The Best Techniques Which Shows Technical Strength.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-7 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
+                <div class="skills">
+                    <div class="skills-item">
+                        <div class="skills-item-info">
+                            <span class="skills-item-title">UI/UX Design</span>
+                            <span class="skills-item-count c-gray">89%</span>
+                        </div>
+
+                        <div class="skills-item-meter bg-border-color">
+                            <span class="skills-item-meter-active bg-orange-color border-orange-color" style="width: 89%">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-item-info">
+                            <span class="skills-item-title">Backend</span>
+                            <span class="skills-item-count c-gray">92%</span>
+                        </div>
+
+                        <div class="skills-item-meter bg-border-color">
+                            <span class="skills-item-meter-active bg-green-color border-green-color" style="width: 92%">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-item-info">
+                            <span class="skills-item-title">Logic Implementation</span>
+                            <span class="skills-item-count c-gray">97%</span>
+                        </div>
+
+                        <div class="skills-item-meter bg-border-color">
+                            <span class="skills-item-meter-active bg-secondary-color border-secondary-color" style="width: 97%">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skills-item">
+                        <div class="skills-item-info">
+                            <span class="skills-item-title">Digital Marketing & SEO</span>
+                            <span class="skills-item-count c-gray">86%</span>
+                        </div>
+
+                        <div class="skills-item-meter bg-border-color">
+                            <span class="skills-item-meter-active bg-primary-color border-primary-color" style="width: 86%">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="overview-block-ptb">
+
+<div class="container">
+
+
+<div class="row">
+
+    <div class="col-lg-12">
+        <div class="heading hosting_title analytices_title text-center">
+            <h2 class="h1our1 heading-titleour1 wow fadeInUp" data-wow-delay="0.2s"><span>Industries We Serve
+            </span> </h2>
+            <div class="heading-line">
+                <span class="short-line"></span>
+                <span class="long-line"></span>
+                
+            </div>
+            <p class="subtitle">Meet the faces behind our company. Our team offers the most up-to-date, sustainable custom solutions to the problem. They work so hard to provide best to their customers..</p>
+
+        </div>
+    
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="swiper-container top-pagination">
+
+        <div class="swiper-wrapper">
+
+            <div class="case-slider-item swiper-slide">
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="heading case-item align-center">
+                            <img src="{% static 'alphacs/images/alphaimg/education.svg' %}" height="150px" width="150px" alt="Education Logo">
+                        <h4 class="case-item__title">Education</h4>
+                        <div class="heading-line">
+                            <span class="short-line bg-yellow-color"></span>
+                            <span class="long-line bg-yellow-color"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="heading case-item align-center">
+                            <img src="{% static 'alphacs/images/alphaimg/person.svg' %}" height="150px" width="150px" alt="Individual Logo">
+                        <h4 class="case-item__title">Individual</h4>
+                        <div class="heading-line">
+                            <span class="short-line bg-yellow-color"></span>
+                            <span class="long-line bg-yellow-color"></span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="heading case-item align-center">
+                            <img src="{% static 'alphacs/images/alphaimg/organisation.svg' %}" height="150px" width="150px" alt="Organisation Logo">
+                        <h4 class="case-item__title">Organisation</h4>
+                        <div class="heading-line">
+                            <span class="short-line bg-yellow-color"></span>
+                            <span class="long-line bg-yellow-color"></span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    
+</div>
+
+                                  
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="chat_area">
+<img class="h_leaf one wow fadeInUp" data-wow-delay="0.4s" src="{% static 'alphacs/images/alphaimg/con_ban.png' %}" alt="Contact Logo">
+<div class="container">
+    <div class="sec_title text-center mb_50 wow fadeInUp" id="contactus" style="margin-bottom: 100px;" data-wow-delay="0.3s">
+        <a href="{% url 'contact-us' %}" id="contactus" class="pos_btn">Contact Us</a>
+    </div>
+    
+</div>
+</section>
+
+
+</div>
+
+    
+    
+{% endblock %}
+
+
+
+
+
+
+
+

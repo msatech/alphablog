@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+*.env
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Compiled Python files
+*.pyc
+
+# Database
+*.sqlite3
+
+# Log files
+*.log
+
+# Virtual environment
+venv/
+env/
+
+# Compiled source
+*.mo
+*.pot
+
+# Mac-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
+
+# Secret keys and sensitive information
+secret_key.txt
+settings_local.py
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Dependency directories
+pip/
+pip-log.txt
+
+# Ignore migrations if you're using schema migrations
+**/migrations/
+
+# Ignore node_modules directory if you're not using JavaScript/CSS build tools
+node_modules/
+
+# Ignore environment files
+.env
+
+# Ignore backup files created by text editors
+*~
+
+# Ignore any custom files or directories that you don't want to include
+custom_file.txt
+custom_directory/
